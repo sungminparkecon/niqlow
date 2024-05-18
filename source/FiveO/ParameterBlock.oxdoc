@@ -1,7 +1,9 @@
 /**(Sub)vector of parameters to be treated as a single unit.
 
 Blocks allow the user to create groupings of parameter values.  The individual parameters are still available, but the vector of current
-values is also available in <code>ParameterBlock::v</code>.
+values is also available in <code>ParameterBlock::v</code>.  
+
+The child class `ParameterArray` stores v as an array not a vector, so this allows for a mixture of scalars, vectors, or even arrays.
 
 @see Objective::Blocks, BlackBox::Block
 

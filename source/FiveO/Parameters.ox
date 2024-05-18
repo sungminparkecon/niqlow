@@ -617,3 +617,51 @@ Bounded::Menu(fp) {
     fprintln(fp,"Value <input type=\"number\" name=\"",L+CGI::ivalsuffix,"\" step=\"any\" min=\"",AV(LB),"\" max=\"",AV(UB),"\" value=\"",start,"\" >");
     fprintln(fp,"</fieldset>");
     }
+
+/**Create a new array of related Parameters.
+@param L string Label for block
+@param ... a list of parameters or blocks to add to the array<br>
+     if only one argument is supplied it should be an array of parameters.
+**/
+ParameterArray::ParameterArray(L, ...) {
+	decl va = va_arglist(),k;
+	this.L = L;
+	block = curpar = 0;
+	pos = -1;
+	if (sizeof(va)==1) va = va[0];
+	v={};N=0; PsiL={}; Psi={};  				//v is initialized as an array not a vector here
+	for(k=0; k<sizeof(va); ++k)	AddToBlock(va[k]);
+	}
+
+/**Append to the array.
+@param ... list of parameters, blocks and arrays. 
+**/
+ParameterArray::AddToBlock(...
+//    #ifdef OX_PARALLEL
+    va
+ //   #endif
+    )	{
+	decl b;
+	if (pos!=UnInitialized) oxrunerror("FiveO Error 21a. Cannot add to a Block after it has been added to the Objective\n");
+    foreach (b in va) {
+		if (b==this) oxrunerror("Cannot add a ParameterArray to itself!  Circular definition.");
+		if (!isclass(b,"Parameter")&&!isclass(b,"ParameterBlock")&&!isclass(b,"ParameterArray")) 
+			oxrunerror("FiveO Error 21b. Can only add Parameters, Blocks and Arrays to an Array");
+		Psi |= b;
+		if (N) PsiL |= b.L; else PsiL = {b.L};
+		++N;
+		v |= b.v;
+		}
+	}
+
+/**
+ @return    
+**/
+ParameterArray::Encode() {
+	decl f,p;
+    f = {};			//returns an array not a vector
+    foreach (p in Psi) {f|=p->Encode(); println(f); }
+	return f;
+	}
+
+

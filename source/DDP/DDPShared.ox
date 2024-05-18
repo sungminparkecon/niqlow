@@ -1,3 +1,6 @@
+/**  Functions, classes and methods shared among all components of DDP.
+@sortkey N
+**/
 #include "DDPShared.h"
 
 /**Recreate a State vector from an index and offset vector.

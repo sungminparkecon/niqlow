@@ -275,3 +275,15 @@ x<sup>j</sup> = `Probability`()
 struct Probabilities : ParameterBlock	{
 	Probabilities(L="",ivals=<0.5>,labels=0);
 	}
+
+/** A container for <b>heterogeneous</b> parameter blocks.
+Parameter arrays return arrays of row vectors when evaluated (except if the member is another array). 
+**/
+struct ParameterArray : ParameterBlock {
+	           ParameterArray(L="PA",...);
+	           AddToBlock(...);
+	           ToggleDoNotVary(elements=DoAll);
+               SetDoNotVary(setting);
+	virtual    Encode();
+    virtual    Menu(fp);
+	}

@@ -1,0 +1,16 @@
+/** Parameter is the base class for values to optimize over.
+
+Parameter is derived from `Quantity` to represent variables that are continuous.  (Variables in DDP such as states and actions are Discrete.)</p>
+
+THe value of a Parameter is the <code>v</code> member of the class inherited from Objective. Other members are used to store starting values and to restrict the range the value takes on during optimization.</p>
+
+Click on <a href="hierarchy.html">Hierarchy</a> to see the different kinds of parameters in a logical order.</p>
+
+`ParameterBLocks` are a derived class for representing a vector of parameters treated together. Each element of a block has to be a simple parameter</p>
+
+`ParameterArray` is a derived Block class for representing heterogeneous parameter structures. </p>
+
+Parameters to maximize over are added to the `Objective` before applying an `Algorithm` which modifies the parameter values.
+
+@sortkey D
+**/

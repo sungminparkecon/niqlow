@@ -1,8 +1,8 @@
-/** How the user constructs Utility, Reachable States and other aspects of a state $\theta$.
+/** Bellman is the class derived from DP that contains dynamic (across states) members and methods; this explains how the user constructs Utility, Reachable States and other aspects of a state $\theta$.
+@sortkey D
 
 <a href="#auto"><span class="skip"><abbr title=" Skip down to items defined in Bellman.ox">&nbsp;&#8681;&nbsp;</abbr></span></a>
 
-@sortkey C
 
 <OL class="body">
 

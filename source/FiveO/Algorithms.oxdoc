@@ -1,7 +1,7 @@
 /** Methods to Optimize an Objective or Solve a Non-Linear System.
 <a href="#auto"><span class="skip"><abbr title=" Skip down to items defined in Algorithms.ox">&nbsp;&#8681;&nbsp;</abbr></span></a>
 
-@sortkey ACA
+@sortkey E
 
 Algorithms are methods to optimize/solve a vector of parameters $(\psi)$ for either an objective to maximize or a system of equations to solve.  Each algorithm is derived from the `Algorithm` class.
 

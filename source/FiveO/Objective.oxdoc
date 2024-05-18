@@ -1,0 +1,6 @@
+/** Objective is the base class for defining what to optimize or solve.
+
+The base and derived objective classes are documented here.  Click on "Hierarchy" on the menu bar to see them organized in a logical order.  
+
+@sortkey C
+**/

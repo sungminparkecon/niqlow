@@ -1,6 +1,7 @@
-/** <mark>Starting Point:</mark> Beginner's Guide to Dynamic Programming.
+/** <H1 id="over">What Kind of <span class="n">niqlow</span> User Are You?</H1>
+There are three places to start depending on your background in programming and economic modeling.</br>Read this to decide where you should go next.
+@sortkey A
 
-<H1 id="over">What Kind of <span class="n">niqlow</span> User Are You?</H1>
 
 <span class="n">DDP</span> is the part of <span class="n">niqlow</span> that allows you to build a dynamic program, solve it and use the solution to make predictions, simulate data, etc.  If you get to the stage of estimating parameters of your model, then you will also use the <a href="../FiveO/default.html"><span class="n">FiveO</span></a> part that handles optimization.</p>
 

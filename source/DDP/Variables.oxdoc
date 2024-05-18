@@ -1,7 +1,9 @@
 /** Describes how to represent actions, states, and other discrete quantities in your DP model.
+@sortkey E
+
 <a href="#auto"><span class="skip"><abbr title=" Skip down to items defined in Variables.ox">&nbsp;&#8681;&nbsp;</abbr></span></a>
 
-@sortkey AAA
+
 
 <OL class="contents">Contents
 <LI><a href="#OV">Overview</a></LI>
